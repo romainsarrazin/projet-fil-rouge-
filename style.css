@@ -1,0 +1,122 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background-color: black;    
+    padding:1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer {
+    background-color: black;
+    color: rgb(126, 126, 126);
+    text-align: center;
+    padding: 2% ; 
+}
+
+header .social-icons {
+    display: flex;
+}
+header em {
+    margin-left: 10px;
+}
+h2{
+    padding-left: 5%;
+    font-size: 90%;
+    color: rgba(126, 126, 126);
+}
+ h1 {
+    padding-left: 5%;
+}
+
+
+.blue {
+    color:rgb(29, 192, 143);
+}
+.bordered-word {
+    padding: 3px;
+    display: inline-block;
+    background-color: rgb(29, 192, 143);
+    color: white; /* Pour changer la couleur du texte en blanc */
+}
+.centered-words {
+    display: flex;
+    justify-content: center;
+}
+
+.centered-words p {
+    margin: 0 10px;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-container img {
+    margin: 1%;
+    width: 20%; /* Largeur fixe pour chaque image */
+    height: auto; /* Hauteur ajustée automatiquement */
+}
+
+.yeseva-one-regular {
+    font-family: "Yeseva One", serif;            /*police phrase Hello*/
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-header {
+    font-family: "Montserrat", sans-serif;       /*police reste texte hearder*/
+    font-weight: 900;
+    font-style: normal;
+}
+
+.montserrat-body {
+    font-family: "Montserrat", sans-serif;           /*police reste texte body*/
+    font-weight: 500;
+    font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* Styles pour afficher les images par ligne de trois sur les téléphones */
+    .image-container {
+        display: flex;
+        flex-wrap: wrap; /* Permet aux images de passer à la ligne suivante */
+        justify-content: space-between; /* Pour répartir les images sur la largeur */
+    }
+
+    /* Ajuste la taille des images pour les téléphones */
+    .image-container img {
+        width: calc(33.33% - 10px); /* Définit la largeur de chaque image */
+        margin-bottom: 5px; /* Espacement entre les lignes */
+    }
+    .image-container img:nth-child(n + 10) {
+        display: none;
+    }
+    .centered-words p {
+        font-size: 80%;
+        margin: 3%;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .image-container {
+        display: grid; 
+        grid-template-columns: repeat(5, calc(20% - 5px)); 
+        gap: 10px;
+        justify-content: center; /* Centrage horizontal des images */
+    }
+
+    /* Ajuste la taille des images pour les tablettes */
+    .image-container img {
+        width: 100%; /* Largeur maximale pour remplir chaque colonne */
+        height: auto; /* Hauteur ajustée automatiquement */
+    }
+}
+
+
